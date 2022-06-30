@@ -9,6 +9,17 @@ body {
   margin: 0 auto;
 }
 
+.select {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 35px;
+  padding: 5px;
+  background-color: #6c4ae7;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
 .list {
   display: flex;
   flex-wrap: wrap;

@@ -436,3 +436,30 @@ function dom(array, node) {
 
 dom(films, elList);
 
+let newArray = [];
+
+var result = [];
+elSelect.addEventListener(`change`, function () {
+  result = [];
+  elList.innerHTML = "";
+  let selectValue = elSelect.value;
+  films.forEach((i) => {
+    if (i.genres.includes(selectValue)) {
+      result.push(i);
+    }
+  });
+
+  dom(result, elList);
+});
+
+for (func of films) {
+  newArray.push(...func.genres);
+}
+
+let elSet = new Set(newArray);
+for (const item of Array.from(elSet)) {
+  let li = document.createElement("option");
+  li.textContent = item;
+  elSelect.appendChild(li);
+}
+
